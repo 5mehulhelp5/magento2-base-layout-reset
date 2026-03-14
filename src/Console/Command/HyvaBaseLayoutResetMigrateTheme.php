@@ -36,7 +36,7 @@ class HyvaBaseLayoutResetMigrateTheme extends Command
         $this->addArgument('theme', InputArgument::REQUIRED, 'Theme code to be migrated');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $code = $input->getArgument('theme');
         $this->migrateThemeToGeneratedBaseLayout->process($code);
