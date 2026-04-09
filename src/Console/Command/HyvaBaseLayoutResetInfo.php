@@ -44,7 +44,7 @@ class HyvaBaseLayoutResetInfo extends Command
         $this->setDescription('List Hyvä Themes and the layout reset mechanism they use');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $info = $this->hyvaThemeResetInfo->getHyvaThemesInfo();
         $table = new CliTable($output);
